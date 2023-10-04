@@ -1,5 +1,5 @@
 import streamlit as st
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
@@ -10,7 +10,7 @@ from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub, GPT4All
 
-HUGGINGFACEHUB_API_TOKEN = "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"
+# HUGGINGFACEHUB_API_TOKEN = "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"
 
 def handle_userinput(user_question):
     response = st.session_state.conversation({'question': user_question})
